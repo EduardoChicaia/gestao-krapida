@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
 :root {
@@ -10,16 +13,85 @@
     --cor-nav: #fff;
     --cor-textnav: #707070;
     --cor-rosa: #e4e;
-    
+    --cor-amare: #edb61d;
+}
+body{
+    background-color: var(--cor-principal);
+    height: 100vh;
 }
 
+header{
+    display: flex;
+    margin: 15px;
+    align-items: center;
+}
 .menu{
     position: fixed;
     top: 0px;
     left: 0px;
     height: 100%;
-    width: 250px;
+    width: 270px;
+    background: var(--cor-nav);
 }
 .Img .logo img{
     width: 55px;
 } 
+
+.nav-texto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nav-texto span {
+    font-weight: 700;
+    color: #707070;
+}
+
+.nav-texto p {
+    font-weight: 700;
+    margin: 0px 25px;
+    color: #707070;
+}
+
+.pesquisar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 50px 15px 30px;
+    cursor: pointer;
+    background:var(--cor-principal);
+}
+.pesquisar span i {
+    font-size: 30px;
+    color: var(--cor-textnav);
+}
+
+.pesquisar input {
+    height: 30px;
+    width: 200px;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.paginas{
+    margin: 5px 20px ;
+}
+.paginas li{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    height: 40px;
+    margin-top: 10px;
+}
+
+.paginas li span i{
+    min-width: 80px;
+    font-size: 30px;
+    padding: 15px 0px;
+    color: var(--cor-textnav);
+}
+.paginas a{
+    text-decoration: none;
+    color: var(--cor-textnav);
+}
