@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-principal: #f6f5ff;
+    --cor-modobt: #ddd;
+    --cor-nav: #fff;
+    --cor-textnav: #707070;
+    --cor-rosa: #e4e;
+    
+}
+
+.menu{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 250px;
+}
+.Img .logo img{
+    width: 55px;
+} 
