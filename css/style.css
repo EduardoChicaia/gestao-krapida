@@ -53,6 +53,21 @@ header{
     color: #707070;
 }
 
+.arrow{
+    display: flex;
+    align-items: center;
+    height: 30px;
+    width: px;
+    font-size: 25px;
+    position: absolute;
+    top: 30px;
+    right: -11px;
+    background: #e4e;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
 .pesquisar{
     display: flex;
     justify-content: space-around;
@@ -60,6 +75,10 @@ header{
     margin: 50px 15px 30px;
     cursor: pointer;
     background:var(--cor-principal);
+    height: 50px;
+    width: 255px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
 }
 .pesquisar span i {
     font-size: 30px;
@@ -76,6 +95,7 @@ header{
 
 .paginas{
     margin: 5px 20px ;
+    cursor: pointer;
 }
 .paginas li{
     display: flex;
@@ -90,8 +110,41 @@ header{
     font-size: 30px;
     padding: 15px 0px;
     color: var(--cor-textnav);
+    margin-left: 5px;
 }
 .paginas a{
     text-decoration: none;
     color: var(--cor-textnav);
+    font-weight: 600;
+}
+
+.paginas li:hover{
+    background: #e4e;
+    color: var(--cor-amare);
+    width: 230px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    transform: translateX(19px);
+}
+
+.modo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #707070;
+    color: ;
+    width: 150px;
+    height: 30px;
+    margin: 15px 55px;
+    border-radius: 25px;
+}
+.modo span{
+    font-size: 25px;
+    margin: 0px 5px ;
+}
+.modo .btn{
+    font-size: 39px;
+    transform: translateY(3px);
+    margin-left: 10px;
 }
