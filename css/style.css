@@ -33,7 +33,9 @@ header{
     height: 100%;
     width: 270px;
     background: var(--cor-nav);
+    transition: all 0.4s ease-in-out;
 }
+
 .Img .logo img{
     width: 55px;
     border-radius: 5px;
@@ -177,6 +179,7 @@ header{
 /*---------------Animaçao do Menu------------------*/
 .Close{
     width: 88px; 
+    transition: all 0.4s ease-in-out;
 }
 .Close .nav-texto{
     opacity: 0;
@@ -212,6 +215,7 @@ header{
 }
 .Close .arrow{
     transform: translateY(-50) rotate(180deg);
+    transition: all 0.4s ease-in-out;
 }
 .Close .arrow{
     transform: rotate(180deg);
@@ -224,12 +228,84 @@ header{
 .Dark{
     background-color: var(--cor-dark);
     color: var(--cor-nav);
+    transition: all 0.5s ease-in-out;
 }
-.Dark {
+.Dark .modo p{
+    font-weight: 300;
+    color: #fff;
+}
+.Dark .menu .nav-texto  span {
    color: #fff;
 }
-/*-----------------Modo----------------*/
+.Dark .menu .nav-texto p {
+    color: #fff;
+ }
+ .Dark .menu .paginas li i{
+    color: white;
+ }
+ .Dark .menu .paginas li a{
+    color: white;
+ }
+/*-----------------HOME----------------*/
 
 .Home{
-    width: calc(100% - 270px);
+    margin-left: 290px;
+    color: var(--cor-textnav);
+}
+.text_home{
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 700;
+}
+.Home .Grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+.Home .Grid .dizeres{
+    background: var(--cor-textnav);
+    color: white;
+    margin-top: 10px;
+    width: 300px;
+    height: 420px;
+    padding: 2rem 1rem 2.5rem;
+    text-align: justify;
+    border-radius: 2rem;
+}
+
+.Home .Grid .dizeres:hover{
+    transform: scale(1.05);
+    border: .5rem solid #e4e;
+    transition: 0.5s ease-in-out;
+}
+.Home .Grid .dizeres .text_h2{
+    text-align: center;
+}
+.Home .Grid .dizeres .text_h4{
+    text-align: center;
+}
+.Home .Grid .dizeres .text_p{
+    margin: 0.5rem;
+    letter-spacing: 0.1rem;
+    /*Color reticencias na frase*/
+    display: -webkit-box;
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.Home .Grid .dizeres .text_btn {
+    width: 200px;
+    height: 30px;
+    margin: 10px 30PX;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+.Home .Grid .dizeres .text_btn:hover {
+    background: inherit;
+    cursor: pointer;
+    color: var(--cor-principal);
 }

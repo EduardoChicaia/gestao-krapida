@@ -3,6 +3,8 @@ const menu = document.querySelector('.menu')
 const fechar = document.querySelector('.arrow')
 const dark = document.querySelector('.md')
 const dt = document.querySelector('.dt')
+const escuro = document.querySelector('dark')
+const claro = document.querySelector ('light')
 
 
 
@@ -20,4 +22,4 @@ dark.addEventListener('click', ()=>{
          dt.innerText = 'Escuro'
     }
     console.log('Certo')
-})
+});
