@@ -14,6 +14,7 @@
     --cor-textnav: #707070;
     --cor-rosa: #e4e;
     --cor-amare: #edb61d;
+    --cor-dark: #18191a;
 }
 body{
     background-color: var(--cor-principal);
@@ -35,6 +36,7 @@ header{
 }
 .Img .logo img{
     width: 55px;
+    border-radius: 5px;
 } 
 
 .nav-texto{
@@ -72,7 +74,8 @@ header{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 50px 15px 30px;
+    margin: 20px 15px 30px;
+    height: 100%;
     cursor: pointer;
     background:var(--cor-principal);
     height: 50px;
@@ -81,20 +84,22 @@ header{
     border-bottom-left-radius: 25px;
 }
 .pesquisar span i {
-    font-size: 30px;
+    font-size: 20px;
     color: var(--cor-textnav);
+    margin: 15px;
 }
 
 .pesquisar input {
-    height: 30px;
-    width: 200px;
+    height: 100%;
+    width: 240px;
+    background: var(--cor-principal);
     padding: 10px;
     border: none;
     outline: none;
 }
 
 .paginas{
-    margin: 5px 20px ;
+    margin: 5px 10px ;
     cursor: pointer;
 }
 .paginas li{
@@ -107,10 +112,10 @@ header{
 
 .paginas li span i{
     min-width: 80px;
-    font-size: 30px;
+    font-size: 20px;
     padding: 15px 0px;
     color: var(--cor-textnav);
-    margin-left: 5px;
+    margin-left: 15px;
 }
 .paginas a{
     text-decoration: none;
@@ -118,33 +123,113 @@ header{
     font-weight: 600;
 }
 
-.paginas li:hover{
+.paginas li:hover {
     background: #e4e;
     color: var(--cor-amare);
-    width: 230px;
+    width: 240px;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
     transform: translateX(19px);
+    transition: all 0.5s ease-in-out;
 }
 
-.modo{
+.modo {
+    position: relative;
+    margin: 20px 25%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 15px;
-    background: #707070;
-    color: ;
-    width: 150px;
+    width: 138px;
     height: 30px;
-    margin: 15px 55px;
-    border-radius: 25px;
+    border-radius: 15px;
+    color: var(--cor-textnav);
 }
-.modo span{
-    font-size: 25px;
-    margin: 0px 5px ;
+.modo i{
+    position: absolute;
+    top: 50;
+    left: -20px;
+    margin-left: 30px;
+    transform: translateY(-7px);
 }
-.modo .btn{
-    font-size: 39px;
-    transform: translateY(3px);
-    margin-left: 10px;
+
+.modo .dt, .lg{
+    margin: 0px 0px 0px 40px;
+    top: 50;
+    left: -20px;
+}
+
+.modo .lg, .light{
+    transform: translateX(-80px); 
+    opacity: 0;
+}
+.modo .dt, .dark{
+    opacity: 1;
+}
+
+.modo .md{
+    margin-top: 27px;
+    width: 50px;
+    height: 50px;
+    font-size: 37px;
+    transform: translateX(-40px);
+    cursor: pointer;
+    
+}
+/*---------------Animaçao do Menu------------------*/
+.Close{
+    width: 88px; 
+}
+.Close .nav-texto{
+    opacity: 0;
+}
+.Close .ps{
+    opacity: 0;
+}
+.Close a{
+    opacity: 0;
+}
+.Close .lg{
+    opacity: 0;
+}
+.Close .light{
+    opacity: 0;
+}
+.Close .md{
+    transform: translateX(-145px);
+    cursor: pointer;
+}
+.Close .pesquisar{
+    width: 70px;
+}
+
+.Close .paginas li:hover {
+    background: #e4e;
+    color: var(--cor-amare);
+    width: 60px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    transform: translateX(19px);
+    transition: all 0.5s ease-in-out;
+}
+.Close .arrow{
+    transform: translateY(-50) rotate(180deg);
+}
+.Close .arrow{
+    transform: rotate(180deg);
+}
+/*-----------------Modo----------------*/
+.Dark .menu{
+    background-color: var(--cor-dark);
+    color: var(--cor-nav);
+}
+.Dark{
+    background-color: var(--cor-dark);
+    color: var(--cor-nav);
+}
+.Dark {
+   color: #fff;
+}
+/*-----------------Modo----------------*/
+
+.Home{
+    width: calc(100% - 270px);
 }
