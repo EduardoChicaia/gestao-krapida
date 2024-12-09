@@ -19,6 +19,7 @@
 body{
     background-color: var(--cor-principal);
     height: 100vh;
+    transition: all 0.2s ease-in;
 }
 
 header{
@@ -33,7 +34,7 @@ header{
     height: 100%;
     width: 270px;
     background: var(--cor-nav);
-    transition: all 0.4s ease-in-out;
+    transition: all 0.2s ease-in;
 }
 
 .Img .logo img{
@@ -136,46 +137,43 @@ header{
 }
 
 .modo {
-    position: relative;
     margin: 20px 25%;
     display: flex;
     align-items: center;
-    width: 138px;
-    height: 30px;
+    width: 158px;
+    height: 40px;
     border-radius: 15px;
     color: var(--cor-textnav);
+    background-color: var(--cor-principal);
 }
-.modo i{
+.modo .btn_mode{
+    display: flex;
+    align-items: center;
+    width: 40px;
+    height: 22px;
+    border-radius: 22px;
+    background-color: black;
+    margin-left: 15px;
+}
+
+.modo .btn_mode .bt_mode{
     position: absolute;
-    top: 50;
-    left: -20px;
-    margin-left: 30px;
-    transform: translateY(-7px);
+    margin-left: 2px;
+    width: 20px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
 }
 
-.modo .dt, .lg{
-    margin: 0px 0px 0px 40px;
-    top: 50;
-    left: -20px;
-}
-
-.modo .lg, .light{
-    transform: translateX(-80px); 
+.modo  .light{ 
     opacity: 0;
 }
-.modo .dt, .dark{
+.modo .dark{
     opacity: 1;
+    margin-left: 10px;
 }
 
-.modo .md{
-    margin-top: 27px;
-    width: 50px;
-    height: 50px;
-    font-size: 37px;
-    transform: translateX(-40px);
-    cursor: pointer;
-    
-}
 /*---------------Animaçao do Menu------------------*/
 .Close{
     width: 88px; 
@@ -190,18 +188,34 @@ header{
 .Close a{
     opacity: 0;
 }
-.Close .lg{
+.Close .dark_text{
     opacity: 0;
 }
 .Close .light{
     opacity: 0;
 }
-.Close .md{
-    transform: translateX(-145px);
+.Close .btn_mode{
+    background-color: black;
+    transform: translateX(-80px);
     cursor: pointer;
+}
+.Close .modo{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 50px;
+    height: 25px;
+    margin-top: 5px;
+}
+.Close .modo .bt_mode{
+    background-color: black;
 }
 .Close .pesquisar{
     width: 70px;
+}
+
+.Close .dark{
+    display: none;
 }
 
 .Close .paginas li:hover {
@@ -217,6 +231,7 @@ header{
     transform: translateY(-50) rotate(180deg);
     transition: all 0.4s ease-in-out;
 }
+
 .Close .arrow{
     transform: rotate(180deg);
 }
@@ -224,11 +239,12 @@ header{
 .Dark .menu{
     background-color: var(--cor-dark);
     color: var(--cor-nav);
+    transition: all 0.2s ease-in-out;
 }
 .Dark{
     background-color: var(--cor-dark);
     color: var(--cor-nav);
-    transition: all 0.5s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 .Dark .modo p{
     font-weight: 300;
@@ -246,11 +262,33 @@ header{
  .Dark .menu .paginas li a{
     color: white;
  }
+.Dark .btn_mode{
+    background-color: #18191a;
+ }
+ .Dark .bt_mode{
+    transform: translateX(16px);
+    transition: all 0.2s ease-in-out;
+ }
+
 /*-----------------HOME----------------*/
 
 .Home{
-    margin-left: 290px;
+    position: relative;
+    left: 290px;
+    height: 100vh;
+    width: calc(100% - 290px);
     color: var(--cor-textnav);
+}
+.Close ~ .Home{
+    left: 130px;
+    width: calc(100% - 90px);
+}
+
+.Close ~ .Home .text_home{
+    transform: translateX(-40px);
+}
+.Dark  .Home .text_home{
+    color: white;
 }
 .text_home{
     text-align: center;

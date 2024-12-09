@@ -1,7 +1,7 @@
 const body = document.querySelector('body')
 const menu = document.querySelector('.menu')
 const fechar = document.querySelector('.arrow')
-const dark = document.querySelector('.md')
+const dark = document.querySelector('.bt_mode')
 const dt = document.querySelector('.dt')
 const escuro = document.querySelector('dark')
 const claro = document.querySelector ('light')
@@ -16,10 +16,5 @@ fechar.addEventListener('click', () =>{
 dark.addEventListener('click', ()=>{
     body.classList.toggle('Dark')
 
-    if(body.classList.contains('Dark')){
-        dt.innerText = 'Claro'
-    }else{
-         dt.innerText = 'Escuro'
-    }
     console.log('Certo')
 });
