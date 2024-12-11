@@ -272,19 +272,21 @@ header{
 
 /*-----------------HOME----------------*/
 
-.Home{
+.main{
     position: relative;
     left: 290px;
     height: 100vh;
     width: calc(100% - 290px);
     color: var(--cor-textnav);
+    transition: all 0.2s ease-in-out;
 }
-.Close ~ .Home{
+.Close ~ .main{
     left: 130px;
     width: calc(100% - 90px);
+    transition: all 0.2s ease-in-out;
 }
 
-.Close ~ .Home .text_home{
+.Close ~ .main .text_home{
     transform: translateX(-40px);
 }
 .Dark  .Home .text_home{
@@ -346,4 +348,72 @@ header{
     background: inherit;
     cursor: pointer;
     color: var(--cor-principal);
+}
+
+/*-----------------ADMINISTRAÇÃO----------------*/
+
+.administracao_block{
+    margin: 10px;
+    padding: 10px;
+    position: relative;
+}
+.administracao_text{
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 700;
+}
+.administracao_block .financas{
+    margin: 50px 5px;
+   
+}
+
+.administracao_block .bloco_fina span{
+    margin-right: 550px;
+}
+.administracao_block .bloco_fina span li{
+    position: relative;
+    left: 150px;
+    top: -85px;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    width: 120px;
+    font-weight: 700;
+}
+
+.administracao_block .entradas_text{
+    
+}
+
+.Rh .Rh_block{
+    display: flex;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.rh_diversos .diversos {
+    position: relative;
+    display: flex;
+    top: -52px;
+    margin-top: 9px;
+    font-weight: 700;
+    padding: 7px;
+}
+
+.rh_diversos .documento {
+    flex-direction: column;
+    position: relative;
+    top: -15px;
+    margin: 6px;
+    display: none;
+}
+
+.Rh .Rh_block{
+    display: flex;
+}
+
+.Rh .Rh_text{
+    margin-right: 30px;
 }
