@@ -6,6 +6,13 @@ const dt = document.querySelector('.dt')
 const escuro = document.querySelector('dark')
 const claro = document.querySelector ('light')
 
+//--------------- variaveis da administração-----------------
+
+const fin = document.querySelector('.fin')
+const open = document.querySelector('.open')
+const modal_container = document.querySelector('.modal_container')
+const entradas = document.querySelector('.entradas')
+const X = document.querySelector('.X')
 
 
 fechar.addEventListener('click', () =>{
@@ -18,3 +25,14 @@ dark.addEventListener('click', ()=>{
 
     console.log('Certo')
 });
+
+entradas.addEventListener('click', () =>{
+    modal_container.style.display = 'block'
+    modal_container.style.transition = 'all 0.5s ease'
+    console.log('click')
+})
+
+X.addEventListener('click', () =>{
+    modal_container.style.display = 'none'
+    console.log('Hello')
+})
