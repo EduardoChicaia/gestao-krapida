@@ -369,7 +369,7 @@ header{
     font-size: 30px;
 }
 .administracao_block .financas{
-    margin: 60px 5px;
+    margin: 85px 5px;
 }
 
 .administracao_block .bloco_fina span{
@@ -573,7 +573,7 @@ header{
     height: 100vh;
     background-color: #322f298e;
     backdrop-filter: blur(7px);
-    display: ;
+    display: none;
 }
 .modal_container_saida .modal_saida{
     background-color: #f6f6f9d3;
@@ -611,10 +611,14 @@ header{
     color: white;
     transition: all 0.2s ease;
 }
+.modal_container_saida .close{
+    display: none;
+}
 .Container_saida{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
+    display: flex;
+    justify-content: space-between;
+    margin:10px 90px;
+
 }
 .Container_saida .diversifica{
     text-align: center;
@@ -623,9 +627,78 @@ header{
     padding: 10px;
     width: 200px;
 }
-.administracao_block .entradas_text{
-    
+.Container_saida .diversifica .cb {
+    background-color: black;
+    width: 25px;
+    margin: 5px;
+    color: white;
+    border-radius: 5px;
 }
+.Container_saida .diversifica .cb i{
+    font-size: 20px;
+}
+.Container_saida .diversifica #pt{
+    background-color: #e4e;
+}
+.Container_saida .diversifica #al{
+    background-color: greenyellow;
+}
+.Container_saida .diversifica #mt{
+    background-color: blue;
+}
+.diversifica .valor_saida h3{
+    font-size: 15px;
+    font-weight: bolder;
+    color: black;
+    margin: 5px;
+}
+.diversifica .valor_saida h1{
+    font-weight: bolder;
+    color: black;
+    margin-top: 150px;
+}
+.diversifica .progesso_saida svg{
+    position: absolute;
+    margin-top: 10px;
+    width: 7rem;
+    height: 7rem;
+    transform: translateY(-170px);
+    stroke-dasharray: 110;
+    stroke-dashoffset: 92;
+}
+
+.diversifica .progesso_saida svg circle{
+    fill: none;
+    stroke: red;
+    stroke-width: 14;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+}
+/*.diversifica .tot_saida svg circle{
+    stroke-dasharray: 200;
+    stroke-dashoffset: -160;
+}*/
+.diversifica .totla_saida svg circle{
+    stroke-dasharray: 200;
+    stroke-dashoffset: -160;
+}
+.diversifica  .percentagem_saida {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.diversifica  .percentagem_saida p{
+    width: 100%;
+    height: 100%;
+    transform: translateY(-130px);
+    margin-left: 90px;
+}
+.Container_saida .diversifica:hover{
+    transform: scale(1.05);
+    transition: all 3rem ease;
+}
+/*-------------------------------Final modal saidas------------------------------------*/
 
 .Rh .Rh_block{
     position: absolute;
@@ -676,6 +749,7 @@ header{
     left: 290px;
     margin: 5px;
     width: 100px;
+    display: none;
 }
 .rh_diversos .documento p{
     background: black;
@@ -685,6 +759,12 @@ header{
     color: white;
     width: 100px;
 }
+.rh_diversos .documento p:hover,
+.rh_diversos .fac p:hover,
+.rh_diversos .seguro p:hover {
+    background-color: #18191aac;
+    color: aliceblue;
+}
 .rh_diversos .fac {
     cursor: pointer;
     position: absolute;
@@ -692,6 +772,7 @@ header{
     left: 290px;
     margin: 5px;
     width: 100px;
+    display: none;
 }
 .rh_diversos .fac p{
     background: black;
@@ -708,6 +789,7 @@ header{
     left: 290px;
     margin: 5px;
     width: 100px;
+    display: none;
 }
 .rh_diversos .seguro p{
     background: black;
@@ -725,3 +807,185 @@ header{
 .Rh .Rh_text{
     margin-right: 30px;
 }
+/*--------------------modal documentos---------------*/
+
+.modal_documento_container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #322f298e;
+    backdrop-filter: blur(7px);
+    display: ;
+}
+
+.modal_documento_container .modal_documento{
+    background-color: #f6f6f9d3;
+    width: 1000px;
+    height: 400px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.modal_documento_container .modal_documento h3{
+    text-align: center;
+    margin: 10px;
+    color: black;
+}
+.modal_documento_container .modal_documento .reset{
+    cursor: pointer;
+    position: absolute;
+    font-size: 20px;
+    top: 13px;
+    left: 590px;
+    color: black;
+    font-weight: bolder;
+}
+.modal_documento_container .modal_documento .add{
+    cursor: pointer;
+    position: absolute;
+    font-size: 20px;
+    top: 13px;
+    left: 620px;
+    color: black;
+    font-weight: bolder;
+}
+.modal_documento_container .modal_documento .X{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    cursor: pointer;
+    width: 40px;
+    height: 30px;
+    border-top-right-radius: 10px;
+    top: 0px;
+    left: 960px;
+    color: black;
+    font-weight: 700;
+}
+.modal_documento_container .modal_documento .X:hover{
+    background: red;
+    color: white;
+    transition: all 0.2s ease;
+}
+.modal_documento_container .modal_documento .moto_driver_document .pesquisar2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 15px 30px;
+    height: 100%;
+    cursor: pointer;
+    background:var(--cor-principal);
+    height: 50px;
+    width: 500px;
+    border-radius: 25px;
+    transform: translateX(50%);
+
+}
+.modal_documento_container .modal_documento .moto_driver_document input{
+    height: 100%;
+    width: 360px;
+    background: var(--cor-principal);
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+.modal_documento_container .modal_documento .moto_driver_document .pesquisar2 span i {
+    font-size: 20px;
+    color: var(--cor-textnav);
+    margin: 10px;
+}
+.modal_documento_container .container_add{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #322f298e;
+    backdrop-filter: blur(0px);
+    display: none;
+}
+.modal_documento_container .container_add .X{
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    left: 370px;
+    color: white;
+}
+.modal_documento_container .container_add .X:hover{
+    color: black;
+    transition: all 0.2s ease;
+}
+
+.modal_documento_container .container_add .modal_add{
+    background-color: #f6f6f9d3;
+    width: 400px;
+    height: 200px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.modal_documento_container .container_add .modal_add h4{
+    color: white;
+    text-align: center;
+    padding: 10px;
+    background-color: #707070;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.modal_documento_container .container_add .modal_add input{
+    width: 250px;
+    height: 30px;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    margin: 10px 70px;
+
+}
+.modal_documento_container .container_add .modal_add .adicionar div{
+    display: flex;
+    text-align: center;
+}
+.modal_documento_container .container_add .modal_add .add_img{
+    cursor: pointer;
+    font-size: 10px;
+    width: 250px;
+    height: 20px;
+    margin: 10px 140px;
+    background-color: white;
+    color: #18191a;
+    border-radius: 20px;
+    text-align: center;
+}
+.modal_documento_container .container_add .modal_add .add_img:hover {
+    background: inherit;
+    cursor: pointer;
+    color: black;
+    transition: all 0.2s ease;
+}
+.modal_documento_container .container_add .modal_add button{
+    cursor: pointer;
+    font-size: 10px;
+    width: 140px;
+    height: 20px;
+    margin: 10px 130px;
+    background-color: white;
+    color: #18191a;
+    border-radius: 20px;
+    border: none;
+    text-align: center;
+}
+.modal_documento_container .container_add .modal_add button:hover{
+    background: inherit;
+    cursor: pointer;
+    color: black;
+    transition: all 0.2s ease;
+}
+
